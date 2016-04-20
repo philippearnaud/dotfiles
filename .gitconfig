@@ -1,0 +1,33 @@
+[user]
+	name = Philippe
+	email = philippe.demangou@me.com
+[core]
+	editor = vim
+	excludesfile = /Users/pademangou/.gitignore_global
+	autocrlf = input
+[alias]
+	co = checkout
+  re = rebase
+	lg = log --graph --pretty=format:'%C(red)%h%Creset -%C(yellow)%d%Creset %s %C(green)(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	ci = commit
+	st = status
+	br = branch
+	type = cat-file -t
+	dump = cat-file -p
+
+[push]
+	default = simple
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[status]
+	showUntrackedFiles = all
+[diff]
+	wordRegex = .
+[pull]
+	rebase = preserve
+[commit]
+   template = ~/.gitmessage
